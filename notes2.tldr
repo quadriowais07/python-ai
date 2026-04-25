@@ -5,3 +5,8 @@
 > https://github.com/fullstacktraning/ashokit-9am.git
 
 
+> python --version ## to use python < 3.14
+> python3 --version ## to use python >= 3.14
+
+> Extension: .py
+> Execute: python main.py
