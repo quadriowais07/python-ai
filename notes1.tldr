@@ -1,0 +1,17 @@
+Repository: Code collaboration tool
+Ex: GitHub / SVN / CVS / BitBucket
+
+Git: Tool used to access repo
+git --version --> to check git installation
+
+My repo for Python AI by AshokIT: https://github.com/quadriowais07/python-ai.git
+
+How to create local repo:
+> git init # initialize local repo
+> git config --global user.name "Owais" # add username
+> git config --global user.email "a@b.co" # add email
+> git add . # add task to local repo
+> git commit -m "message"
+> git remote add origin https://github.com/quadriowais07/python-ai.git
+> git push -u origin master # pushed code from local to cloud repo
+
