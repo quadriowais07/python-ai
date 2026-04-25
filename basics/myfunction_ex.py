@@ -1,17 +1,21 @@
-# Fucntion
-# Business logic (or) Block of statements
+# Fucntion: Business logic (or) Block of statements
 # "reuse" the business logic
 # def is the keyword, used to declare the function
 
 # Example - 1
 def func_one():
+    # Empty function by adding pass keyword.
     pass
+
+# calling function
 func_one()
 
 
 # Example - 2
 def func_one():
     print("welcome to functions !!!")
+    # welcome to functions !!!
+
 func_one()
 
 
