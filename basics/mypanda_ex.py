@@ -288,7 +288,7 @@ print(df.sort_index())
 print("------------")
 
 
-df = pd.read_csv("employees_null.csv")
+df = pd.read_csv("resources/csv/employees_null.csv")
 print(df)
 #    name   age   salary
 # 0  emp1  22.0  10000.0

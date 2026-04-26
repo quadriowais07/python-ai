@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("emps.csv")
+df = pd.read_csv("resources/csv/emps.csv")
 # read single col
 print(df["name"])
 # 0      Alice
@@ -49,8 +49,8 @@ print(df)
 print("----------")
 
 
-df1 = pd.read_csv("emps.csv")
-df2 = pd.read_csv("department.csv")
+df1 = pd.read_csv("resources/csv/emps.csv")
+df2 = pd.read_csv("resources/csv/department.csv")
 
 merged_df = pd.merge(df1, df2)
 print(merged_df) # inner join based on common column - Department
@@ -117,7 +117,7 @@ print(merged_df[ merged_df["salary"]>45000 ])
 print("----------")
 
 
-df = pd.read_csv("students.csv")
+df = pd.read_csv("resources/csv/students.csv")
 print(df)
 #    id     name  marks       city
 # 0   1    Alice   85.0  Hyderabad
