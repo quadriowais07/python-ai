@@ -1,0 +1,17 @@
+"""
+List:
+> ordered, mutable, duplicates, heterogeneous
+> representation: []
+> List operations are slow
+> Lists are not vectorized
+> For this reason Numpy modules were introduced
+> Required jupyter
+> To launch Jupyter: jupyter-notebook
+
+"""
+"""
+Tuples:
+> Ordered, immutables, allow duplicates, Hetrogeneous
+> representation: ()
+> faster compared to list
+"""
