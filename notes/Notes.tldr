@@ -1,0 +1,33 @@
+Types of databases: SQL & NoSQL
+
+NoSQL:
+> databases are light weight
+> Less burden on hardware
+> consumes less bandwidth
+> Ex: MongoDB, CassandraDB
+
+SQL:
+> Ex: Oracle, MySQL, SQLServer
+
+Terminology:
+SQL                         NoSQL
+databases                   databases ex: company
+tables                      collections ex: employees
+rows / collections          objects (Documents, ex: {emp_id: 111})
+primary key                 _id
+                            Methods available:
+                            > insertOne() -- insertMany()
+                            > updateOne() -- updateMany()
+                            > deleteOne() -- deleteMany()
+                            > findOne() -- findAll()
+
+MongoDB account:
+https://www.mongodb.com/cloud/atlas/register
+
+
+MongoDB connection string:
+mongodb+srv://admin:admin@pythonai.phjq8zd.mongodb.net/?appName=PythonAI
+
+FastAPI
+uvicorn
+motor
