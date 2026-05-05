@@ -23,19 +23,28 @@ MacBook:
 
 """
 Windows:
+# create new virtual environment
 > python -m venv venv314
 
+# activate new virtual environment in command prompt
 > venv314\Scripts\activate (cmd)
 or
+# activate new virtual environment in powershell
 > venv314\Scripts\activate.psi (powershell)
 
 > create requirements.txt
 
-> pip install -r requiremnts.txt
+# install packages in requirements file
+> pip install -r requiremnts.txt # 
 
+# to deactivate the virtual environment
 > deactivate (to deactivate the environment)
 
+# to reactivate the virtual environment
 > venv314\Scripts\activate (to activate the environment)
+
+# to remove virtual environment
+Remove-Item -Recurse -Force .\venv314
 """
 
 
