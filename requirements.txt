@@ -3,6 +3,14 @@ pandas
 openpyxl
 matplotlib
 jupyter
-fastapi
-uvicorn
-motor
+fastapi # to run apis
+uvicorn[standard] # to run server - to run uvicorn in EC2 we need to add [standard] to install the necessary dependencies for production use
+motor # library / driver to connect to MongoDB
+transformers # 
+langchain # LLM framework used to define LLM flow (transformer architecture flow)
+chromadb # library / driver to connect to Vector DB
+pypdf # to read pdf file
+sentence-transformers # to implement embedding
+openai # to generate answers
+python-multipart # upload pdf file
+python-dotenv # to read .env file and load environment variables

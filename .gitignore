@@ -217,5 +217,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+apis/_pycache__/
+basics/.ipynb_checkpoints/
+llm-rag-protocol/backend/_pycache__/
+llm-rag-protocol/.env
 venv314/
-notes.txt

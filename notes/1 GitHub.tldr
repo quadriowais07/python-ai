@@ -15,3 +15,5 @@ How to create local repo:
 > git remote add origin https://github.com/quadriowais07/python-ai.git
 > git push -u origin master # pushed code from local to cloud repo
 
+> https://github.com/toolsknowledge/ashokit-datascience
+> https://github.com/toolsknowledge/llmops

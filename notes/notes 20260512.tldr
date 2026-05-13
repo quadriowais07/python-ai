@@ -1,0 +1,65 @@
+llm-rag-project
+    backend
+        rag.py (remove api key)
+        main.py (FastAPI)
+        requirements.txt
+    
+    uploads
+    .env (contains OpenAI key)
+    Dockerfile (to implement containerization)
+    Jenkins (to implement pipeline/configurations)
+    .gitignore
+    .dockerignore (docker configuration)
+
+Step 1:
+    do changes in requirements.txt
+
+    uvicorn[standard]
+    python-dotenv
+
+Step 2:
+    create .env file
+
+Step 3:
+    modify rag.py file
+
+Step 4:
+    create .gitignore file
+
+Step 5:
+    create .dockerignore file
+
+Step 6:
+    create Dockerfile
+
+Step 7:
+    Create Jenkinsfile (pipeline)
+        Stage 1: Checkout appln from GitHub
+        Stage 2: Build Docker Image (Dockerfile)
+        Stage 3: Push Docker Image to Docker Hug (Optional)
+        Stage 4: Deploy Docker Image to EC2
+
+Step 8:
+    push code to repo
+
+Step 9:
+    Create EC2 instance
+    Note: 20GB+ SSD required
+    Open below ports
+        8080 (Jenkins)
+        8000 (Uvicorn)
+        3000 (ReactJS)
+
+Step 10:
+    Assign elastic IP (permanent IP address)
+
+Step 11:
+    Open the below ports
+
+Step 12:
+    Update Ubuntu
+        > sudo apt update -y
+
+
+
+

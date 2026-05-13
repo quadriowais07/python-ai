@@ -1,0 +1,109 @@
+LLM (large language model)
+> NLP, GenAI, AgenticAI
+
+
+bulk text (huge) ---> [[machine]]
+> machine / electronic device trained on huge amount of text / data is called LLM
+> coz of training machine able to 
+    > read, write, summarize, translate, answer (questions), write code
+    > understand context, intent, meaning, tone of content
+    > LLM also has capability of prediction
+
+Ex: supply LLM a demo.pdf (100 pages) and ask summarize to 10 pages or translate, it will be able to do it
+
+Ex of models using LLM are ChatGPT, Claude, Gemini
+
+> LLMs are based on Transformers architecture
+
+
+Transformers architecture:
+
+input data --> Tokenization --> Embedding layer --> transformer blocks
+
+> --> transformer blocks -> self attention -> self attention mechanism -> Output layer
+
+> --> transformer blocks -> feed forward -> feed forward network -> Output layer
+
+--> Output layer --> training & loss optimization
+
+Tokenization:
+> convert input data into tokens is called Tokenization
+
+1- Word Tokenization:
+> sentences broken to words
+Ex; input --> what is AI (Machine cannot understand this)
+> convert this to tokens
+> Ex: ["what", "is", "AI"]
+> this is example of Word Tokenization
+> Drawbacks:
+    > it becomes huge vocabulary
+    > reuse doesn't exist
+    > unable to handle new words
+
+2- Character Tokenization:
+Ex: I love LLM
+["I", "L", "o", "v", "e", "L", "L", "M"]
+> Drawbacks:
+    > it becomes huge vocabulary
+    > slow due to huge vocabulary
+
+3 - Subword Tokenization or Byte Pair Encoding:
+> used in GPT models
+> Ex: unhappiness
+["un", "happi", "ness"]
+> Machine knows these tokens coz of training using huge amount of data
+> advantages:
+    > able to handle unknown words
+    > smaller vocabulary
+    > efficient compared to word & Character Tokenization
+
+> Ex: in 100 pages pdf lets say words that exist is "low", "lower", "lowest"
+> number of times that are repeated in input pdf is ["low"]
+> then next ["er"] & ["est"]
+> So in subword Tokenization it becomes ["low", "er", "est"]
+> this is also called as Byte Pair Encoding (BPE)
+
+> Predefined library in Python is "transformers"
+
+> Example of another IDE like VS Code is "google colab"
+
+
+input
+> Tokenization
+> Embeddings (converting token ids to number vectors)
+> Positional Encoding (to overcome meaning in sentence like Dog bites man / man bites dog)
+> Self attention (find the relationship)
+> multi head attention (grammer, emotion, context, action)
+> Feed forward layers
+> output (softmax)
+
+Vector DB:
+> Shows good performance for storing vectors
+> It is a NoSQL DB
+
+RAG protocol:
+> Restricting given data to train LLM within network is called RAG protocol
+> providing external data is called protocol
+
+langchain:
+> LLM framework
+> define llm flow
+
+pypdf:
+> read pdf file
+
+sentence-transformers
+> used to create Embedding
+
+chromadb:
+> used to connect to vector DB
+
+openai:
+> used to generate AI output
+
+python-multipart:
+> used to upload the pdf files
+
+Chunking:
+> LLM able to handle 500 characters or less at a time
+> dividing large text into packets (threshold number of characters) that LLM can process is called chunking
