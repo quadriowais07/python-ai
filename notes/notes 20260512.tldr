@@ -46,19 +46,77 @@ Step 9:
     Create EC2 instance
     Note: 20GB+ SSD required
     Open below ports
-        8080 (Jenkins)
         8000 (Uvicorn)
+        8080 (Jenkins)
         3000 (ReactJS)
 
 Step 10:
     Assign elastic IP (permanent IP address)
+    Ex: 13.63.68.207
 
 Step 11:
     Open the below ports
 
 Step 12:
-    Update Ubuntu
+    Update Ubuntu (refresh)
         > sudo apt update -y
+
+Step 13:
+    install Java
+        > Jenkins installation depending on Java
+        > https://www.jenkins.io/doc/book/installing/linux/
+        > java --version
+
+Step 14:
+    > Install Jenkins
+    > https://www.jenkins.io/doc/book/installing/linux/
+    > java --version
+
+Step 15:
+    > install docker
+    > sudo apt install docker.io -y
+    > docker --version
+
+Step 16:
+    > enable permissions
+    > sudo usermod -aG docker ubuntu
+    > sudo usermod -aG jenkins ubuntu
+    > sudo usermod -aG docker jenkins
+
+Step 17:
+    > restart both jenkins & docker
+    > sudo systemctl restart jenkins
+    > sudo systemctl restart docker
+
+Step 18:
+    > connect to jenkins
+    > http://13.63.68.207:8080/
+    > password: sudo cat <command>
+
+Step 19:
+    > install below plugins
+        > Git server
+        > Docker & Docker pipeline
+        > SSH, SSH server & SSH agent
+        > AWS Credentials
+
+Step 20:
+    > install docker desktop
+    > https://www.docker.com/products/docker-desktop/?utm_source=chatgpt.com
+    > create account and set username & password
+
+Step 21:
+    > configure Credentials in Jenkins
+        > OPENAI_API_KEY
+        > EC2_HOST (ubuntu@<ip-address>)
+        > ec2-ssh-key (SSH Username w/ key)
+        > dockerhub-creds (Username with password)
+
+Step 22:
+    > create pipeline
+    > llm-rag-pipeline
+
+
 
 
 
