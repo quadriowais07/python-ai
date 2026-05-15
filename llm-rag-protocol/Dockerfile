@@ -24,7 +24,10 @@ WORKDIR /app
 
 # Install Python dependencies first (caching layer)
 COPY backend/requirements.txt .
-RUN pip install --upgrade pip && pip install -r requirements.txt
+# RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    rm -rf /root/.cache
 
 # Copy backend application code
 COPY backend/ ./backend/
