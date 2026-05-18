@@ -24,7 +24,7 @@ WORKDIR /app
 
 # Install Python dependencies first (caching layer)
 # COPY llm-rag-protocol/backend/requirements.txt .
-COPY llm-rag-protocol/requirements.txt .
+COPY backend/requirements.txt .
 # RUN pip install --upgrade pip && pip install -r requirements.txt
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
