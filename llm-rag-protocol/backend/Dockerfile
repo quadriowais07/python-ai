@@ -25,13 +25,13 @@ WORKDIR /app
 # Install Python dependencies first (caching layer)
 # --no-cache-dir keeps the image small (no pip wheel cache left behind).
 # CPU-only torch is pulled via the --extra-index-url in requirements.txt.
-COPY llm-rag-protocol/backend/requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
     rm -rf /root/.cache
 
 # Copy backend application code
-COPY llm-rag-protocol/backend/ ./backend/
+COPY backend/ ./backend/
 
 # Create uploads directory (sibling of backend, matches main.py path)
 RUN mkdir -p /app/uploads
