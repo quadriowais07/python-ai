@@ -49,10 +49,12 @@ Step 9:
     > password: Q*****4
     Create EC2 instance
     Note: 20GB+ SSD required
-    Open below ports
+    Open below SCP ports
         8000 (Uvicorn)
         8080 (Jenkins)
         3000 (ReactJS)
+        5173 (ReactJS)
+        80 (HTTP nginx)
 
 Step 10:
     Assign elastic IP (permanent IP address)
@@ -84,7 +86,8 @@ Step 15:
 
 Step 14:
     > Install docker compose
-    > refer to related files folder for commands    
+    > refer to related files folder for commands
+    > Also, llm-rag-protocol/frontend/Jenkinsfile has installation commands
 
 Step 16:
     > enable permissions
