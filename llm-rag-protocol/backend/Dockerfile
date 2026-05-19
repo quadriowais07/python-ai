@@ -35,7 +35,7 @@ COPY backend/ ./backend/
 
 # Create uploads directory (sibling of backend, matches main.py path)
 RUN mkdir -p /app/uploads
-RUN mkdir -p /app/frontend
+# RUN mkdir -p /app/frontend
 
 # Expose FastAPI port
 EXPOSE 8000
