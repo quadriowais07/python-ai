@@ -29,7 +29,7 @@ pipeline {
             when { anyOf { branch 'master'; expression { env.BRANCH_NAME == null } } }
             steps {
                 sh '''
-                    docker build -f llm-rag-protocol/backend/Dockerfile -t ${BACKEND_IMAGE}:${IMAGE_TAG} .
+                    docker build -f llm-rag-protocol/backend/Dockerfile -t ${BACKEND_IMAGE}:${IMAGE_TAG} ./llm-rag-protocol
                     docker tag ${BACKEND_IMAGE}:${IMAGE_TAG} ${BACKEND_IMAGE}:latest
                 '''
             }
@@ -39,7 +39,7 @@ pipeline {
             when { anyOf { branch 'master'; expression { env.BRANCH_NAME == null } } }
             steps {
                 sh '''
-                    docker build -f llm-rag-protocol/frontend/Dockerfile -t ${FRONTEND_IMAGE}:${IMAGE_TAG} ./frontend
+                    docker build -f llm-rag-protocol/frontend/Dockerfile -t ${FRONTEND_IMAGE}:${IMAGE_TAG} ./llm-rag-protocol/frontend
                     docker tag ${FRONTEND_IMAGE}:${IMAGE_TAG} ${FRONTEND_IMAGE}:latest
                 '''
             }
