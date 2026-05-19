@@ -82,6 +82,10 @@ Step 15:
     > sudo apt install docker.io -y
     > docker --version
 
+Step 14:
+    > Install docker compose
+    > refer to related files folder for commands    
+
 Step 16:
     > enable permissions
     > sudo usermod -aG docker ubuntu
@@ -121,13 +125,60 @@ Step 21:
         > EC2_HOST (ubuntu@<ip-address>)
         > ec2-ssh-key (SSH Username w/ key)
             > username: ubuntu (this is the default username)
+            > password: .pem file contents
         > dockerhub-creds (Username with password)
             > username: quadriowais07
             > password: Q*****4
 
 Step 22:
     > create pipeline
-    > llm-rag-pipeline
+        > llm-rag-pipeline
+
+Note:
+    > to check the docker image created, run below command on EC2 terminal
+        > sudo docker ps
+    > to check logs in container, run below command
+        > sudo docker logs <container-id>
+    > to stop a container, run below command
+        > docker stop <container-id>
+    > to remove an image / container, run below command
+        > docker rm <container-id>
+
+Step 23:
+    download and install NodeJS
+        > frontend frameworks / libraries depending on NodeJS
+    > https://nodejs.org/en/download
+    > node --version
+
+Step 24:
+    Create react application
+    > cd llm-rag-protocol
+    > npm create vite@latest
+        Q1: do you want to proceed (y)
+        Q2: enter project name
+            frontend
+        Q3: chose frameworks
+            react
+        Q4: choose variant
+            javascript
+        Q5: install libraries and run project?
+            yes
+
+Step 25:
+    frontend > src > api.js, App.jsx
+    package.json
+    Dockerfile
+    Jenkinsfile
+
+    it will integrate API calls from backend to frontend
+    App.jsx file is the main component
+    (it includes upload pdf files and we can query)
+    (App.jsx implemented by using RWD)
+
+    package.json file includes libraries info
+
+    nginx is used to implement proxy to secure backend IP
+    Ex: www.llmrag.in > http://10.11.12.111 > http://<backend-ip>
 
 
 
